@@ -1,5 +1,5 @@
 {
-  "name": "use-media",
+  "name": "@blackblock/use-media",
   "version": "0.1.0",
   "main": "./dist/index.js",
   "author": "Hugo Sum",

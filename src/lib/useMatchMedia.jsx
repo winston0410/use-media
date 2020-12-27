@@ -7,6 +7,10 @@ function useMatchMedia ({ query, initialValue = false }) {
     setIsMediaMatched(e.matches)
   }, [])
 
+  const toggleState = useCallback(() => {
+    setIsMediaMatched(prevState => !prevState)
+  }, [])
+
   useEffect(() => {
     const mediaQuery = window.matchMedia(query)
     setIsMediaMatched(mediaQuery.matches)
@@ -18,7 +22,7 @@ function useMatchMedia ({ query, initialValue = false }) {
     }
   }, [])
 
-  return isMediaMatched
+  return [isMediaMatched, toggleState]
 }
 
 export default useMatchMedia
