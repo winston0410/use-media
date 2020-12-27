@@ -1,0 +1,19 @@
+{
+  "name": "use-media",
+  "version": "0.1.0",
+  "main": "./dist/index.js",
+  "author": "Hugo Sum",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "esbuild": "^0.8.26",
+    "react": "^17.0.1"
+  },
+  "scripts": {
+    "build": "node build.js",
+    "prepublish": "yarn build"
+  },
+  "files": [
+    "dist/"
+  ]
+}
