@@ -12,9 +12,17 @@ const build = async () => {
       format: 'esm',
       platform: 'browser',
       external: ['react', 'react-dom'],
-      outdir: path.resolve(distDir)
+      outdir: path.resolve(distDir, 'esm')
     })
 
+    await service.build({
+      entryPoints: ['./src/index.jsx'],
+      bundle: true,
+      format: 'cjs',
+      platform: 'node',
+      external: ['react', 'react-dom'],
+      outdir: path.resolve(distDir, 'cjs')
+    })
   } catch (e) {
     console.log(e);
   } finally {

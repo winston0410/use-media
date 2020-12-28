@@ -1,7 +1,7 @@
 {
   "name": "@blackblock/use-media",
   "version": "0.1.0",
-  "main": "./dist/index.js",
+  "main": "./dist/cjs/index.js",
   "author": "Hugo Sum",
   "license": "MIT",
   "private": false,
@@ -15,5 +15,12 @@
   },
   "files": [
     "dist/"
-  ]
+  ],
+  "type": "commonjs",
+  "exports": {
+    ".": {
+      "require": "./dist/cjs/index.js",
+      "default": "./dist/esm/index.js"
+    }
+  }
 }
